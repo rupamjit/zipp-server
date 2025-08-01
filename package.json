@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "prisma": "^6.13.0",
     "tsc-watch": "^7.1.1",
     "typescript": "^5.9.2"
   },
@@ -15,6 +16,7 @@
   "dependencies": {
     "@apollo/server": "^5.0.0",
     "@as-integrations/express5": "^1.1.2",
+    "@prisma/client": "^6.13.0",
     "@types/express": "^5.0.3",
     "body-parser": "^2.2.0",
     "express": "^5.1.0",
