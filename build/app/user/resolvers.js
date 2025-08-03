@@ -62,4 +62,16 @@ const queries = {
         return getUser;
     }),
 };
-exports.resolvers = { queries };
+const extraResolvers = {
+    User: {
+        tweets: (parent) => __awaiter(void 0, void 0, void 0, function* () {
+            const tweets = db_1.prismaClient.tweet.findMany({
+                where: {
+                    authorId: parent.id
+                }
+            });
+            return tweets;
+        })
+    }
+};
+exports.resolvers = { queries, extraResolvers };
